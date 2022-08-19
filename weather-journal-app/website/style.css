@@ -1,0 +1,274 @@
+html {
+    font-size: 0.8vw;
+    width: 100%;
+    height: 100%;
+    /* text-align: center; */
+    /* vertical-align: middle !important; */
+}
+
+body {
+    /* background: #ffe599; */
+    width: 100vw;
+    height: fit-content;
+    font-family: '-apple-system, BlinkMacSystemFont, sans-serif';
+    margin: 0;
+}
+
+@media (min-width:1000px) {
+    #app {
+        display: grid;
+        grid-template: repeat(8, 0.95fr) / repeat(12, 0.83fr);
+        grid-template-areas:
+            "E1 E1 E1 E1 E1 E1 E1 E1 E1 E1 E1 E1 "
+            "E2 E2 E2 E2 E3  E3 E3 E3 E4  E4 E4 E4 "
+            "E2 E2 E2 E2 E3  E3 E3 E3 E4  E4 E4 E4 "
+            "E2 E2 E2 E2 E3  E3 E3 E3 E4  E4 E4 E4 "
+            ".  .  .   . .  E6 E6 .  .  .  .  .  "
+            ".  .  .   . E5 E5 E5 E5 .  .  .  .  "
+            ".  .  .   . E5 E5 E5 E5 .  .  .  .  "
+            ".  .  .   . E5 E5 E5 E5 .  .  .  .  ";
+        row-gap: 0.1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #zip,
+    #feelings,
+    #inst,
+    .holder.entry {
+        width: 28vw;
+        height: 45vh;
+        border-radius: 20px;
+        vertical-align: middle !important;
+
+
+    }
+
+    .headline {
+        width: 97% !important;
+    }
+
+}
+
+@media (max-width:1000px) {
+    #app {
+        display: grid;
+        grid-template: repeat(16, 0.78fr) / 0.95fr;
+        grid-template-areas:
+            "E1"
+            ". "
+            "E2"
+            "E2"
+            ". "
+            "E3"
+            "E3"
+            ". "
+            "E4"
+            "E4"
+            "E6"
+            "E5"
+            "E5"
+
+        ;
+        column-gap: 0.2fr;
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    #zip,
+    #feelings,
+    #inst,
+    .holder.entry {
+        width: 30vw;
+        height: max-content;
+        vertical-align: middle !important;
+
+    }
+
+    .headline {
+        width: 90% !important;
+    }
+
+}
+
+#app {
+    width: 100vw;
+    height: fit-content;
+    /* height: 100%; */
+    /* background: transparent; */
+    color: #2986cc;
+    font-family: 'Oswald', sans-serif;
+    background-image: linear-gradient(#fff2cc, #cbe5fc, #f9e0e0);
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    background-repeat: repeat;
+}
+
+
+div.inst {
+    grid-area: E2;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    text-align: justify;
+    margin: 0;
+}
+
+div.inst #inst {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    vertical-align: middle;
+    text-align: justify;
+    margin: 0;
+}
+
+div.inst #inst p {
+    align-self: center;
+    vertical-align: middle;
+    text-align: justify;
+    margin: auto;
+    padding: 10px;
+}
+
+.zip {
+    grid-area: E3;
+}
+
+.feel {
+    grid-area: E4;
+
+}
+
+.entry {
+    display: none;
+    font-size: 2rem;
+    grid-area: E5;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: #fff;
+    color: #2986cc;
+    border: solid 0.5rem #2986cc;
+    border-radius: 0.5rem;
+    text-align: center;
+    vertical-align: middle !important;
+    transition: all 0.5s linear;
+}
+
+#generate {
+    grid-area: E6;
+    width: fit-content;
+    height: fit-content;
+    background: #2986cc;
+    color: #fff;
+    border: solid 0.5rem #fff;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.5s linear;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    margin: 0 auto;
+
+}
+
+#generate:hover {
+    background: #ccc;
+    transform: scale(1.1, 1.1);
+    background: #fff;
+    color: #2986cc;
+    border: solid 0.5rem #2986cc;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#zip,
+#feelings,
+#inst {
+    background: #2986cc;
+    color: #ffe599;
+    vertical-align: middle;
+    padding: 7px;
+}
+
+.headline {
+    grid-area: E1;
+    position: relative;
+    background: #fff;
+    color: #2986cc;
+    border: solid 0.5rem #2986cc;
+    border-radius: 0.5rem;
+    width: 97%;
+    text-align: center;
+    font-size: 4rem;
+}
+
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+    display: block;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    width: calc(100%-(2*0.5rem));
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: solid 0.5rem #2986cc;
+    border-radius: 0.5rem;
+}
+
+input {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+
+}
+
+
+#feelings {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+
+/* Style for Placeholder Text*/
+#feelings::placeholder {
+    vertical-align: middle;
+}
+
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #ffe599;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+
+
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #ffe599;
+    font-family: 'Oswald', sans-serif;
+
+
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #ffff;
+    font-family: 'Oswald', sans-serif;
+
+}
